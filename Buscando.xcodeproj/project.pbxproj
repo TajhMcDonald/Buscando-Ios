@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		851130B31D51126B00B41560 /* Icon-60@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 851130B21D51126B00B41560 /* Icon-60@3x.png */; };
 		8527AF101D49624D0094D0F7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8527AF0F1D49624D0094D0F7 /* AppDelegate.swift */; };
 		8527AF121D49624D0094D0F7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8527AF111D49624D0094D0F7 /* ViewController.swift */; };
 		8527AF151D49624D0094D0F7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8527AF131D49624D0094D0F7 /* Main.storyboard */; };
@@ -34,6 +35,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		851130B21D51126B00B41560 /* Icon-60@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-60@3x.png"; sourceTree = "<group>"; };
 		8527AF0C1D49624D0094D0F7 /* Buscando.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Buscando.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8527AF0F1D49624D0094D0F7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8527AF111D49624D0094D0F7 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -100,6 +102,7 @@
 				8527AF0F1D49624D0094D0F7 /* AppDelegate.swift */,
 				8527AF111D49624D0094D0F7 /* ViewController.swift */,
 				8527AF131D49624D0094D0F7 /* Main.storyboard */,
+				851130B21D51126B00B41560 /* Icon-60@3x.png */,
 				8527AF161D49624D0094D0F7 /* Assets.xcassets */,
 				8527AF181D49624D0094D0F7 /* LaunchScreen.storyboard */,
 				8527AF1B1D49624D0094D0F7 /* Info.plist */,
@@ -193,6 +196,7 @@
 				TargetAttributes = {
 					8527AF0B1D49624D0094D0F7 = {
 						CreatedOnToolsVersion = 7.3.1;
+						DevelopmentTeam = J5EEV8595M;
 					};
 					8527AF1F1D49624D0094D0F7 = {
 						CreatedOnToolsVersion = 7.3.1;
@@ -229,6 +233,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				851130B31D51126B00B41560 /* Icon-60@3x.png in Resources */,
 				8527AF1A1D49624D0094D0F7 /* LaunchScreen.storyboard in Resources */,
 				8527AF171D49624D0094D0F7 /* Assets.xcassets in Resources */,
 				8527AF151D49624D0094D0F7 /* Main.storyboard in Resources */,
@@ -401,6 +406,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = Buscando/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = TajhMcdonald.Buscando;
@@ -412,6 +418,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = Buscando/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = TajhMcdonald.Buscando;
@@ -484,6 +491,7 @@
 				8527AF361D49624D0094D0F7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		8527AF371D49624D0094D0F7 /* Build configuration list for PBXNativeTarget "BuscandoTests" */ = {
 			isa = XCConfigurationList;
@@ -492,6 +500,7 @@
 				8527AF391D49624D0094D0F7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		8527AF3A1D49624D0094D0F7 /* Build configuration list for PBXNativeTarget "BuscandoUITests" */ = {
 			isa = XCConfigurationList;
@@ -500,6 +509,7 @@
 				8527AF3C1D49624D0094D0F7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

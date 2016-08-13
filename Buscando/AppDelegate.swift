@@ -2,7 +2,7 @@
 //  AppDelegate.swift
 //  Buscando
 //
-//  Created by Sabrina Johnson on 7/27/16.
+//  Created by Tajh McDonald on 7/27/16.
 //  Copyright © 2016 TMCD. All rights reserved.
 //
 

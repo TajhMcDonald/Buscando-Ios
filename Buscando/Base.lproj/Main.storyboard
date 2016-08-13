@@ -1,25 +1,112 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="16A284a" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Item-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Buscando" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <webView contentMode="scaleToFill" scalesPageToFit="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Ugd-fF-1cv">
+                                <rect key="frame" x="0.0" y="63" width="375" height="560"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="deviceRGB"/>
+                                <connections>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="2hI-NM-miq"/>
+                                </connections>
+                            </webView>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Sya-p6-hBL">
+                                <rect key="frame" x="0.0" y="623" width="375" height="44"/>
+                                <items>
+                                    <barButtonItem style="plain" systemItem="rewind" id="HhV-sD-THW">
+                                        <connections>
+                                            <action selector="goBack" destination="Ugd-fF-1cv" id="gIN-PN-zw5"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="KeR-DV-RYF"/>
+                                    <barButtonItem systemItem="fastForward" id="npv-se-iuH">
+                                        <connections>
+                                            <action selector="goForward" destination="Ugd-fF-1cv" id="VfY-8z-4vl"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="kTW-W1-Boq"/>
+                                    <barButtonItem systemItem="refresh" id="Mry-J4-Ytb">
+                                        <connections>
+                                            <action selector="reload" destination="Ugd-fF-1cv" id="Y3q-5P-XCS"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="KL1-wd-cZO"/>
+                                    <barButtonItem systemItem="action" id="XP4-3N-SuT">
+                                        <connections>
+                                            <action selector="shareButtonClicked:" destination="BYZ-38-t0r" id="hQI-YC-1Kp"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="1Dq-PW-AWm"/>
+                                    <barButtonItem title="Add" id="Ep3-Zh-sNh">
+                                        <connections>
+                                            <action selector="AddPage:" destination="BYZ-38-t0r" id="Cqn-Q2-tGF"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="Jp7-Gq-6oj">
+                                <rect key="frame" x="239" y="324" width="37" height="37"/>
+                                <color key="color" red="0.2859473521349355" green="0.99699176929102484" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            </activityIndicatorView>
+                            <searchBar contentMode="redraw" placeholder="Buscar o ingresar sitio web" showsCancelButton="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hdD-qC-Vuy">
+                                <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="X1r-DI-mwL"/>
+                                </connections>
+                            </searchBar>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Ugd-fF-1cv" firstAttribute="trailing" secondItem="Sya-p6-hBL" secondAttribute="trailing" id="0Wl-TY-Rye"/>
+                            <constraint firstItem="hdD-qC-Vuy" firstAttribute="leading" secondItem="Ugd-fF-1cv" secondAttribute="leading" id="4ng-si-icm"/>
+                            <constraint firstItem="Sya-p6-hBL" firstAttribute="bottom" secondItem="wfy-db-euE" secondAttribute="top" id="F4s-mr-LM6"/>
+                            <constraint firstItem="hdD-qC-Vuy" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="J1x-9V-02l"/>
+                            <constraint firstItem="hdD-qC-Vuy" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="MSz-ky-rXL"/>
+                            <constraint firstItem="Sya-p6-hBL" firstAttribute="top" secondItem="Ugd-fF-1cv" secondAttribute="bottom" id="Oei-Kh-SPN"/>
+                            <constraint firstItem="Ugd-fF-1cv" firstAttribute="leading" secondItem="Sya-p6-hBL" secondAttribute="leading" id="Vng-yh-fmh"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Jp7-Gq-6oj" secondAttribute="trailing" constant="83" id="XLN-Tw-na9"/>
+                            <constraint firstItem="Ugd-fF-1cv" firstAttribute="centerY" secondItem="Jp7-Gq-6oj" secondAttribute="centerY" id="Yn7-KN-YYa"/>
+                            <constraint firstAttribute="trailing" secondItem="hdD-qC-Vuy" secondAttribute="trailing" id="cLw-nw-Eww"/>
+                            <constraint firstItem="hdD-qC-Vuy" firstAttribute="trailing" secondItem="Ugd-fF-1cv" secondAttribute="trailing" id="ePQ-0b-Wyv"/>
+                            <constraint firstItem="Ugd-fF-1cv" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="43" id="wgb-3Y-St2"/>
+                        </constraints>
                     </view>
+                    <tabBarItem key="tabBarItem" title="Item" id="bFN-Dj-gf6"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="actin" destination="Jp7-Gq-6oj" id="U3a-6s-4Is"/>
+                        <outlet property="searchBar" destination="hdD-qC-Vuy" id="paG-yF-VBV"/>
+                        <outlet property="searchDisplayController" destination="wfj-yj-EYU" id="K8V-vr-Edp"/>
+                        <outlet property="webview" destination="Ugd-fF-1cv" id="0J7-gh-b3w"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <searchDisplayController id="wfj-yj-EYU">
+                    <connections>
+                        <outlet property="delegate" destination="BYZ-38-t0r" id="gUW-1n-s5X"/>
+                        <outlet property="searchContentsController" destination="BYZ-38-t0r" id="PZB-u1-A2o"/>
+                        <outlet property="searchResultsDataSource" destination="BYZ-38-t0r" id="Dfl-YL-WWx"/>
+                        <outlet property="searchResultsDelegate" destination="BYZ-38-t0r" id="SKx-XK-c7S"/>
+                    </connections>
+                </searchDisplayController>
             </objects>
+            <point key="canvasLocation" x="483.5" y="53.5"/>
         </scene>
     </scenes>
 </document>
